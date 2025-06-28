@@ -37,10 +37,8 @@ To emulate the day-to-day tasks of an IT Support Specialist or Helpdesk Technici
 ## 📸 Screenshots
 
 | Step             | Screenshot Placeholder         |
-|------------------|--------------------------------|
-| Ticket Created    | ![](images/ticket-created.png) |
-| Agent Response    | ![](images/agent-response.png) |
-| Ticket Resolved   | ![](images/resolved.png)      
+|------------------|--------------------------------| |
+| Ticket Resolved   | ![](Screenshot.png)      
 
 ---
 
