@@ -1,55 +1,70 @@
 # 🛠️ IT Support Simulation
 
-This project simulates a real-world helpdesk workflow using Zendesk.  
-It helped me practice handling technical issues, communicating with users, and resolving tickets efficiently.
+This project simulates real-world IT support workflows using tools such as Zendesk, PowerShell, and Bash scripting.  
+It is designed to demonstrate practical knowledge in IT helpdesk operations, automation, and customer interaction.
 
 ---
 
-## 🧰 Tools Used
+## 🎯 Purpose
 
-- Zendesk (free trial)
-- PowerShell (onboarding script)
-- Bash (ticket platform setup)
+To emulate the day-to-day tasks of an IT Support Specialist or Helpdesk Technician, including:
+- Ticket handling using a ticketing platform
+- User onboarding via PowerShell scripting
+- Infrastructure setup (e.g., osTicket installation)
+- Communicating effectively with end users
 
+## 🧰 Tools & Technologies
+
+- 🖥️ **Zendesk** – Ticket lifecycle simulation (Free Trial)
+- 🛠️ **PowerShell** – AD user onboarding automation
+- 🐧 **Bash** – Linux server configuration for ticket platform (osTicket)
+- 🖧 **Active Directory** – Simulated user and group management
+- 📜 **Documentation** – All procedures are clearly documented and scripted
+  
 ---
 
 ## 💼 Simulated Scenarios
 
-| Issue | Resolution |
-|-------|------------|
-| “I can't connect to Wi-Fi” | Checked IP, restarted router, reassigned DHCP |
-| “New employee needs access” | Ran onboarding script, assigned permissions |
-| “Email not working” | Verified MX records, restarted email service |
+| Issue                            | Resolution                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| "I can't connect to Wi-Fi"       | Verified IP configuration, restarted router, reassigned DHCP lease         |
+| "New employee needs access"      | Ran `user_onboarding.ps1` to create account and assign permissions         |
+| "Email not working"              | Verified DNS (MX) records, restarted email service                         |
+| "Ticket platform needed"         | Installed `osTicket` on a Linux VM using a bash automation script          |
 
 ---
 
 ## 📸 Screenshots
 
-| Step | Image |
-|------|-------|
-| Ticket Created | ![](./screenshots/ticket_created.png) |
-| Agent Response | ![](./screenshots/agent_response.png) |
-| Resolved Status | ![](./screenshots/resolved_status.png) |
+| Step             | Screenshot Placeholder         |
+|------------------|--------------------------------|
+| Ticket Created    | ![](images/ticket-created.png) |
+| Agent Response    | ![](images/agent-response.png) |
+| Ticket Resolved   | ![](images/resolved.png)      
 
 ---
 
-## 🧠 Key Learnings
+## 🧠 Key Skills Demonstrated
 
-- Ticketing system lifecycle (open → in progress → closed)
-- Importance of clear communication with end-users
-- Automation using scripts for repetitive IT tasks
-- Role of documentation in IT support
-
----
-
-## 📜 Scripts
-
-- [`scripts/user_onboarding.ps1`](./scripts/user_onboarding.ps1)  
-  Automates account creation, profile setup, shared drive permissions
-
-- [`scripts/install_osTicket.sh`](./scripts/install_osTicket.sh)  
-  Sets up osTicket on Linux server (LAMP stack)
+- **Troubleshooting** common user issues (network, email, access)
+- **Using a ticketing system** to manage workflow (e.g., Zendesk, osTicket)
+- **Automation** with PowerShell and Bash
+- **Active Directory administration** for user and group management
+- **Effective communication** and technical documentation
+- **Simulated Tier 1 IT Support environment**
 
 ---
 
-## 🗂 Folder Structure
+
+## 📜 Included Scripts
+
+### `scripts/user_onboarding.ps1`
+Automates the onboarding of a new employee:
+- Creates an Active Directory account
+- Adds the user to a security group
+- Generates a home directory on the file server
+
+```powershell
+New-ADUser -Name $Username ...
+Add-ADGroupMember ...
+New-Item -ItemType Directory ...
