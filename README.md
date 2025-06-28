@@ -38,7 +38,7 @@ To emulate the day-to-day tasks of an IT Support Specialist or Helpdesk Technici
 
 | Step             | Screenshot Placeholder         |
 |------------------|--------------------------------| |
-| Ticket Resolved   | ![](Screenshot.png)      
+| Ticket Resolved   | ![](screenshots/Screenshot.png)      
 
 ---
 
